@@ -39,7 +39,7 @@ int main()
         if (p.sprite == '\0') {
             break;
         }
-        cout << p.last << p.first << p.SSN << p.email << endl;
+        cout << p.last << "\t" << p.first << "\t" << p.SSN << "\t" << p.email << "\t" << endl;
     }
 
     return 0;
