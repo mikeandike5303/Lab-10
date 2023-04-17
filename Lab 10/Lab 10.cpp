@@ -6,10 +6,12 @@
 
 using namespace std;
 
-struct Piece {
+struct Person {
     char sprite = '\0';
-    int x;
-    int y;
+    string first;
+    string last;
+    string email;
+    int SSN;
 };
 
 int main()
@@ -23,20 +25,21 @@ int main()
     }
 
     // fix vector to hold person info
-    Piece pieces[10];
-    Piece current;
+    Person people[10];
+    Person current;
     int i = 0;
-    while (gameFile >> current.sprite >> current.x >> current.y) {
-        pieces[i] = current;
+    while (gameFile >> current.SSN >> current.first >> current.last >> current.email) {
+        people[i] = current;
         i++;
+        
     }
 
     // display pieces
-    for (Piece& p : pieces) {
+    for (Person& p : people) {
         if (p.sprite == '\0') {
             break;
         }
-        cout << p.sprite << p.x << p.y << endl;
+        cout << p.last << p.first << p.SSN << p.email << endl;
     }
 
     return 0;
